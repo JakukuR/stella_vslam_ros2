@@ -1,6 +1,6 @@
-By JakukuR : 
-The compressed image topics are used instead of the standard image_raw topics, for optimized performance with rosbag files.
-Real-World Testing: The system has been successfully tested on the D435 chassis with live data from the camera, providing practical real-world results.
+## By JakukuR : 
+1. The compressed image topics are used instead of the standard image_raw topics, for optimized performance with rosbag files.
+2. Real-World Testing: The system has been successfully tested on the D435 chassis with live data from the camera, providing practical real-world results.
 ---
 
 # Stella SLAM ROS2 Integration
