@@ -20,7 +20,7 @@ Before using the scripts, ensure the following are installed:
 
 2. **Stella V-SLAM**:
 
-   * This project relies on the **Stella V-SLAM** package. You should have it installed and configured in your ROS2 workspace.
+   * This project relies on the **[Stella V-SLAM](https://github.com/stella-cv/stella_vslam)** package. You should have it installed and configured in your ROS2 workspace.
 
 3. **ORB Vocabulary File**:
 
