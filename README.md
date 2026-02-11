@@ -1,6 +1,10 @@
 ## By JakukuR : 
 1. The compressed image topics are used instead of the standard image_raw topics, for optimized performance with rosbag files.
 2. Real-World Testing: The system has been successfully tested on the D435 chassis with live data from the camera, providing practical real-world results.
+3. Test Device:
+   - Jetson AGX Orin 64G
+   - Intel Realsense D435
+   - Realman Robotics
 ---
 
 # Stella SLAM ROS2 Integration
