@@ -1,0 +1,8 @@
+run_slam:
+  ros__parameters:
+    publish_tf: false
+    map_frame: "map"
+    odom_frame: "odom"
+    robot_base_frame: "base_link"
+    camera_frame: "chassis_depth_cam_color_optical_frame"
+    transform_tolerance: 0.5

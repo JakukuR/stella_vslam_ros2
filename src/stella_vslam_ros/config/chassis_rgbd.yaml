@@ -1,0 +1,95 @@
+# Chassis Depth Camera RGBD configuration
+# Auto-generated from /chassis_depth_cam/color/camera_info
+
+#==============#
+# Camera Model #
+#==============#
+
+Camera:
+  name: "Chassis RGBD Camera"
+  setup: "RGBD"
+  model: "perspective"
+
+  # Intrinsic parameters from depth camera_info K matrix (848x480)
+  fx: 427.6200866699219
+  fy: 427.6200866699219
+  cx: 418.3992004394531
+  cy: 240.79420471191406
+
+  # Distortion coefficients (plumb_bob model, all zeros = rectified)
+  k1: 0.0
+  k2: 0.0
+  p1: 0.0
+  p2: 0.0
+  k3: 0.0
+
+  fps: 30.0
+  cols: 848
+  rows: 480
+  focal_x_baseline: 21.4    # fx * baseline (427.62 * 0.05m RealSense baseline)
+  depth_threshold: 4.0      # Maximum depth in meters (reduce to cut noisy far depth)
+
+  color_order: "BGR"
+
+#=====================#
+# Tracking Parameters #
+#=====================#
+
+Tracking:
+  margin_local_map_projection: 5.0
+
+Preprocessing:
+  min_size: 400             # Further reduced for weak texture (white cabinet)
+  depthmap_factor: 1000.0   # For ROS depth images in millimeters, use 1000.0
+                            # For depth in meters, use 1.0
+
+#================#
+# ORB Parameters #
+#================#
+
+Feature:
+  name: "default ORB feature extraction setting"
+  scale_factor: 1.2
+  num_levels: 10            # Increased for multi-scale detection of weak textures
+  ini_fast_threshold: 8     # Significantly lowered for white cabinet initialization
+  min_fast_threshold: 2     # Very low threshold to catch subtle features
+
+#====================#
+# Mapping Parameters #
+#====================#
+
+Mapping:
+  baseline_dist_thr: 0.1
+  redundant_obs_ratio_thr: 0.9
+
+#===========================#
+# PangolinViewer Parameters #
+#===========================#
+
+PangolinViewer:
+  keyframe_size: 0.05
+  keyframe_line_width: 1
+  graph_line_width: 1
+  point_size: 2
+  camera_size: 0.08
+  camera_line_width: 3
+  viewpoint_x: 0
+  viewpoint_y: -0.9
+  viewpoint_z: -1.9
+  viewpoint_f: 400
+
+#===============================#
+# IridescenceViewer Parameters  #
+#===============================#
+
+IridescenceViewer:
+  keyframe_size: 0.05
+  keyframe_line_width: 1
+  graph_line_width: 1
+  point_size: 2
+  camera_size: 0.08
+  camera_line_width: 3
+  viewpoint_x: 0
+  viewpoint_y: -0.9
+  viewpoint_z: -1.9
+  viewpoint_f: 400
